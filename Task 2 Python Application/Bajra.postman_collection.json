@@ -1,0 +1,924 @@
+{
+	"info": {
+		"_postman_id": "99557387-d8b2-46d6-9d1c-a6b867f9b4fa",
+		"name": "Bajra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11931216"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Login API",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "hello@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "hello123",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/login/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"login",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Receptionists APIs",
+			"item": [
+				{
+					"name": "Get ALL Patient List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/patients/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"patients",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success API Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/patients/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jun 2022 07:38:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "92"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"slug\": \"aashish-thapa\",\n            \"name\": \"Aashish Thapa\"\n        }\n    ],\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Aashish Thapa",
+									"type": "text"
+								},
+								{
+									"key": "dob",
+									"value": "2022-02-10",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Kathmandu",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "9809999999",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/patients/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"patients",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success API Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "name",
+											"value": "Aashish Thapa",
+											"type": "text"
+										},
+										{
+											"key": "dob",
+											"value": "2022-02-10",
+											"type": "text"
+										},
+										{
+											"key": "address",
+											"value": "Kathmandu",
+											"type": "text"
+										},
+										{
+											"key": "phone",
+											"value": "9809999999",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/patients/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jun 2022 07:38:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"data\": \"Patient has been created.\",\n    \"status\": 201\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Patient Details",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "slug",
+									"value": "aashish-thapa",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Aashish Thapaaaaaaaaaa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/patients/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"patients",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success API Request",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "slug",
+											"value": "aashish-thapa",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Aashish Thapaaaaaaaaaa",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/patients/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jun 2022 07:43:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"data\": \"Patient has been updated.\",\n    \"status\": 201\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Patient",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "slug",
+									"value": "aashish-thapa",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/patients/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"patients",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete Patient",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "slug",
+											"value": "aashish-thapa",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/api/patients/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jun 2022 07:48:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, POST, PATCH, DELETE, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "63"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"data\": \"Patient has been deleted.\",\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All Doctors List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/getdoctors/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"getdoctors",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success API Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/getdoctors/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"getdoctors",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jun 2022 08:29:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "318"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"data\": [\n        {\n            \"id\": \"da98059f-aad0-46db-a4d9-e11e79d8d354\",\n            \"slug\": \"doctor1gmailcom\",\n            \"fullname\": \"Doctor First\",\n            \"address\": \"Kathmandu\",\n            \"phone\": \"0000000000\"\n        },\n        {\n            \"id\": \"c594552a-14a1-489e-9098-669397bbb417\",\n            \"slug\": \"doctor2gmailcom\",\n            \"fullname\": \"Doctor Second\",\n            \"address\": \"Kathmandu\",\n            \"phone\": \"1111111111\"\n        }\n    ],\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Appoinment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "appoinment_date",
+									"value": "2022-6-28",
+									"type": "text"
+								},
+								{
+									"key": "appoinment_time",
+									"value": "5:30 pm",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Appoinment 1",
+									"type": "text"
+								},
+								{
+									"key": "patient_slug",
+									"value": "30af4d7a-aeaa-476d-ae2c-527fe2baa644",
+									"type": "text"
+								},
+								{
+									"key": "doctor_slug",
+									"value": "95ebc731-6489-45c0-aa18-7f3989be28b8",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/appoinments/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"appoinments",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2ODM3ODg2LCJpYXQiOjE2NTY0MDU4ODYsImp0aSI6IjczYjI2Njk1M2JkZDQ5MDZiMjE2NWJmYmUwNjBkNjE1IiwidXNlcl9pZCI6IjM3YWJmMGE3LWJjNTMtNDU3MS05OTQ0LTIzMTYxN2QyN2U0ZiJ9.BLTg4iQ1xJ9ub4mHWBKeUBI8xdkHheCJyyiUoFauoPA",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Doctors APIs",
+			"item": [
+				{
+					"name": "Active Appoinments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/active/appoinments/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"active",
+								"appoinments",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success API Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/active/appoinments/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"active",
+										"appoinments",
+										""
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jun 2022 09:39:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "577"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": false,\n    \"data\": [\n        {\n            \"id\": \"f9409ce4-8034-411d-9ede-a456566ca0d6\",\n            \"slug\": \"w70r9w\",\n            \"patient_details\": {\n                \"id\": \"30af4d7a-aeaa-476d-ae2c-527fe2baa644\",\n                \"slug\": \"aashish-thapa\",\n                \"name\": \"Aashish Thapa\",\n                \"dob\": \"2022-02-10\",\n                \"address\": \"Kathmandu\",\n                \"phone\": \"9809999999\"\n            },\n            \"appoinment_date\": \"2022-6-28\",\n            \"appoinment_time\": \"5:30 pm\",\n            \"description\": \"Appoinment 1\",\n            \"receptionist_details\": {\n                \"id\": \"d155685c-c1ff-4735-b7a3-0cdeea5c0532\",\n                \"slug\": \"hellogmailcom\",\n                \"email\": \"hello@gmail.com\",\n                \"name\": \"Hello\"\n            },\n            \"created_at\": \"2022-06-28T09:09:35.663734Z\",\n            \"updated_at\": \"2022-06-28T09:12:35.426806Z\"\n        }\n    ],\n    \"status\": 200\n}"
+						}
+					]
+				},
+				{
+					"name": "Inactive Appoinments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/api/inactive/appoinments/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"inactive",
+								"appoinments",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success API Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/api/inactive/appoinments/",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"api",
+										"inactive",
+										"appoinments",
+										""
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 28 Jun 2022 09:38:52 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.4"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": true,\n    \"data\": \"Inactive Appoinment Not Found.\",\n    \"status\": 204\n}"
+						}
+					]
+				},
+				{
+					"name": "Close Appoinments",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "slug",
+									"value": "w70r9w",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/api/complete/appoinments/",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"api",
+								"complete",
+								"appoinments",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjU2ODQwODUyLCJpYXQiOjE2NTY0MDg4NTIsImp0aSI6ImRjZDUwNzU3MDIzYTRhYmQ4ZmFmMTZjNmFjZWJlMmUyIiwidXNlcl9pZCI6IjllOTQzNjJkLTcxNzEtNDJlYS1iNDIyLWM2YWJlYmRlYmRmZiJ9.JpObC0UqtDHZ7iZFar2sW-iPrLtRYJST9OY2wFBKDHE",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
